@@ -1,6 +1,6 @@
 ### Run locally
 
-ppython -m venv .venv && . .venv/bin/activate
+python -m venv .humaein && . .humaein/bin/activate
 pip install -r requirements.txt
 python pipeline.py data/sample.csv data/sample.json
 
