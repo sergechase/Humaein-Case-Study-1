@@ -3,7 +3,7 @@ Claim Resubmission Pipeline
 - Ingests from multiple EMR formats (CSV + JSON)
 - Normalizes to a unified schema
 - Applies eligibility logic
-- Output:  output/local ~ resubmission.json + rejections_log.json
+- Output:  output/local ~  resubmission_candidates.json + rejections_log.json
 
 Usage example:
   python pipeline.py data/sample.csv data/sample.json
@@ -178,7 +178,7 @@ def main(argv=None):
     parser = argparse.ArgumentParser()
     parser = argparse.ArgumentParser()
     parser.add_argument("inputs", nargs="+", help="Paths to EMR files (.csv or .json)")
-    parser.add_argument("--out", default="output/local/resubmission.json")
+    parser.add_argument("--out", default="output/local/ resubmission_candidates.json")
     parser.add_argument("--rejects", default="output/local/rejections_log.json")
     args = parser.parse_args(argv)
 
